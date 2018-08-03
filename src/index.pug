@@ -1,0 +1,31 @@
+doctype html
+html(lang="ru")
+	include include/head
+	body.page
+		.page-wrapper
+			.header
+				.main-logo
+					img.main-logo__image(src="img/logo.png", alt="Школа семи гномов")
+				.page-content
+					form.reg-form(action="success.html")
+						.reg-form__row
+							input#name.reg-form__input(type="text", name="name", placeholder="Заполните поле")
+							label.reg-form__label(for="name") Ваше имя *
+						.reg-form__row
+							input#name.reg-form__input(type="email", name="email", placeholder="ksenia-minaeva@mail.ru")
+							label.reg-form__label(for="email") Ваш e-mail *
+						.reg-form__row
+							input#name.reg-form__input(type="tel", name="phone", placeholder="+7xxx99988877")
+							label.reg-form__label(for="phone") Телефон
+						.reg-form__row
+							.reg-form__col
+								button.reg-form__submit Зарегистрироваться
+							.reg-form__col
+								label.control.control--checkbox
+									input#agree.control__checkbox(type="checkbox", name="agree", checked="checked")
+									div.control__indicator
+								label(for="agree").reg-form__agreement 
+									span Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики конфиденциальности
+			.kid
+				img.kid__image(src="img/kid.png", alt="Школа семи гномов")
+		include include/scripts
